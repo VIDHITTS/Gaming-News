@@ -30,7 +30,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background: rgba(60, 61, 55, 0.25);
+    background: rgba(220, 255, 46, 0.25);
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(236, 223, 204, 0.1);
     padding: 2rem 1rem;
