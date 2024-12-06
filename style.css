@@ -65,7 +65,7 @@ body {
 .nav-links a:hover {
     background: rgba(149, 0, 255, 0.1);
     transform: translateX(10px);
-    
+
 }
 
 /* Content Styles */
@@ -144,24 +144,24 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
 .video-banner {
-
-        width: 1520px;
-        height: 500px;
-        border: solid black;
-        position: relative;
-        overflow: hidden; /* Hide overflow */
-
-    
+    width: 8vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    /* Hide overflow */
+    border: 5px solid;
 }
+
 .video-background {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
+    top: -5rem;
+    right: 0;
     min-height: 100%;
-    width: auto;
+    width: 81.5vw;
     height: auto;
-    z-index: -1; /* Place video behind content */
-    transform: translate(-50%, -50%);
+    z-index: -1;
+    /* Place video behind content */
+    /* transform: translate(-50%, -50%); */
 }
