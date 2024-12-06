@@ -30,9 +30,9 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background: rgba(60, 61, 55, 0.25);
+    background: rgba(67, 32, 6, 0.25);
     backdrop-filter: blur(10px);
-    border-right: 1px solid rgba(236, 223, 204, 0.1);
+    border-right: 1px solid rgba(218, 136, 14, 0.1);
     padding: 2rem 1rem;
     z-index: 1000;
 }
@@ -63,13 +63,13 @@ body {
 
 .nav-links li.active a,
 .nav-links a:hover {
-    background: rgba(149, 0, 255, 0.1);
+    background: rgba(145, 13, 238, 0.1);
     background: rgba(149, 0, 255, 0.1);
     transform: translateX(10px);
 
 }
 
-/* Content Styles */
+
 .content {
     flex: 1;
     padding: 2rem;
