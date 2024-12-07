@@ -99,6 +99,7 @@ body {
 /* Trending Page Specific Styles */
 .trending-section {
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .section-title {
@@ -108,16 +109,60 @@ body {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid rgba(139, 92, 246, 0.3);
 }
-/* Game Card Grid */
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
+
+/* Scroll Container */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.game-row {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 1rem 0;
+}
+
+.game-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Scroll Buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.3);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background: rgba(139, 92, 246, 0.5);
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
 }
 
 /* Netflix-style Game Cards */
 .game-card {
+    flex: 0 0 300px; /* Fixed width, no growing or shrinking */
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -125,13 +170,13 @@ body {
 }
 
 .game-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .game-card-image {
     width: 100%;
-    height: 400px;
+    height: 200px; /* Reduced height */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -144,7 +189,7 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -167,26 +212,26 @@ body {
 }
 
 .game-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem; /* Reduced size */
+    margin-bottom: 0.5rem;
     color: white;
 }
 
 .game-card p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 /* Badges and Info */
 .card-badge, .rank-badge, .update-badge {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
     font-weight: 600;
     z-index: 2;
 }
@@ -209,8 +254,8 @@ body {
 .release-info, .update-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -223,7 +268,7 @@ body {
 
 .debate-image {
     width: 100%;
-    height: 400px;
+    height: 300px; /* Reduced height */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -283,156 +328,6 @@ body {
     font-weight: bold;
 }
 
-/* Hot Releases Styles */
-/* .hot-release {
-    position: relative;
-    background: linear-gradient(to right bottom, rgba(139, 92, 246, 0.1), rgba(60, 61, 55, 0.25));
-}
-
-.card-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--purple);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-}
-
-.release-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: rgba(236, 223, 204, 0.7);
-} */
-
-/* Top Charts Styles */
-/* .charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.platform-chart {
-    background: rgba(60, 61, 55, 0.25);
-    border-radius: 15px;
-    padding: 1.5rem;
-}
-
-.chart-list {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.chart-item {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(236, 223, 204, 0.1);
-}
-
-.rank {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--purple);
-    width: 40px;
-}
-
-.game {
-    flex: 1;
-}
-
-.trend {
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.875rem;
-}
-
-.trend.up {
-    color: var(--success);
-}
-
-.trend.down {
-    color: var(--danger);
-}
-
-.trend.new {
-    color: var(--warning);
-} */
-
-/* Game Updates Styles */
-/* .update {
-    position: relative;
-    background: linear-gradient(to right bottom, rgba(16, 185, 129, 0.1), rgba(60, 61, 55, 0.25));
-}
-
-.update-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--success);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-}
-
-.update-info {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    color: rgba(236, 223, 204, 0.7);
-} */
-
-/* Controversies & Debates Styles */
-/* .debate {
-    background: linear-gradient(to right bottom, rgba(239, 68, 68, 0.1), rgba(60, 61, 55, 0.25));
-    padding: 2rem;
-}
-
-.debate-stats {
-    display: flex;
-    gap: 2rem;
-    margin: 1rem 0;
-    font-size: 0.875rem;
-    color: rgba(236, 223, 204, 0.7);
-}
-
-.debate-poll {
-    margin-top: 1.5rem;
-}
-
-.poll-option {
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.poll-option .label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.progress-bar {
-    height: 8px;
-    background: var(--purple);
-    border-radius: 4px;
-    transition: width 0.3s ease;
-}
-
-.poll-option.against .progress-bar {
-    background: var(--danger);
-}
-
-.percentage {
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: bold;
-} */
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
@@ -449,41 +344,21 @@ body {
         flex-direction: column;
     }
 
-    .charts-container {
-        grid-template-columns: 1fr;
+    .game-card {
+        flex: 0 0 250px;
     }
 
-    .news-grid {
-        grid-template-columns: 1fr;
+    .game-card-image {
+        height: 180px;
+    }
+
+    .scroll-container {
+        padding: 0 30px;
+    }
+
+    .scroll-button {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
     }
 }
-
-/* Base card styles */
-/* .news-card {
-    background: rgba(236, 223, 204, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 1.5rem;
-    border: 1px solid rgba(236, 223, 204, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-}
-
-.news-card h3 {
-    color: var(--light);
-    margin-bottom: 0.5rem;
-}
-
-.news-card p {
-    color: rgba(236, 223, 204, 0.8);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-} */

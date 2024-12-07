@@ -28,90 +28,134 @@
             <!-- Hot Releases Section -->
             <section class="trending-section">
                 <h2 class="section-title">Hot Releases</h2>
-                <div class="game-grid">
-                    <div class="game-card">
-                        <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1614179924047-e1ab49a0a0cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <div class="game-card-overlay">
-                                <div class="card-badge">New Release</div>
-                                <div class="game-card-content">
-                                    <h3>Starfield</h3>
-                                    <p>Bethesda's highly anticipated space RPG finally launches! Explore hundreds of planets in this epic adventure.</p>
-                                    <div class="release-info">
-                                        <span class="platform">PC, Xbox Series X/S</span>
-                                        <span class="date">Release: Sept 6, 2023</span>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollSection('hot-releases', -1)">❮</button>
+                    <div class="game-row" id="hot-releases">
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1614179924047-e1ab49a0a0cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">New Release</div>
+                                    <div class="game-card-content">
+                                        <h3>Starfield</h3>
+                                        <p>Bethesda's highly anticipated space RPG finally launches!</p>
+                                        <div class="release-info">
+                                            <span class="platform">PC, Xbox Series X/S</span>
+                                            <span class="date">Sept 6, 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Coming Soon</div>
+                                    <div class="game-card-content">
+                                        <h3>GTA VI</h3>
+                                        <p>The most ambitious open world yet.</p>
+                                        <div class="release-info">
+                                            <span class="platform">All Platforms</span>
+                                            <span class="date">2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Pre-order</div>
+                                    <div class="game-card-content">
+                                        <h3>Spider-Man 2</h3>
+                                        <p>The web-slinging adventure continues.</p>
+                                        <div class="release-info">
+                                            <span class="platform">PS5</span>
+                                            <span class="date">Oct 20, 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Coming Soon</div>
+                                    <div class="game-card-content">
+                                        <h3>Tekken 8</h3>
+                                        <p>The next generation of fighting games.</p>
+                                        <div class="release-info">
+                                            <span class="platform">All Platforms</span>
+                                            <span class="date">Jan 2024</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="game-card">
-                        <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <div class="game-card-overlay">
-                                <div class="card-badge">Coming Soon</div>
-                                <div class="game-card-content">
-                                    <h3>GTA VI</h3>
-                                    <p>Rockstar Games' next installment in the Grand Theft Auto series. Get ready for the most ambitious open world yet.</p>
-                                    <div class="release-info">
-                                        <span class="platform">All Platforms</span>
-                                        <span class="date">Expected: 2025</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="scroll-button right" onclick="scrollSection('hot-releases', 1)">❯</button>
                 </div>
             </section>
 
             <!-- Top Charts Section -->
             <section class="trending-section">
                 <h2 class="section-title">Top Charts</h2>
-                <div class="game-grid">
-                    <div class="game-card">
-                        <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <div class="game-card-overlay">
-                                <span class="rank-badge">#1</span>
-                                <div class="game-card-content">
-                                    <h3>Counter-Strike 2</h3>
-                                    <p>The next evolution of CS:GO with improved graphics and mechanics.</p>
-                                    <div class="trend up">Trending Up</div>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollSection('top-charts', -1)">❮</button>
+                    <div class="game-row" id="top-charts">
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <span class="rank-badge">#1</span>
+                                    <div class="game-card-content">
+                                        <h3>Counter-Strike 2</h3>
+                                        <p>The next evolution of CS:GO.</p>
+                                        <div class="trend up">Trending Up</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <div class="game-card-overlay">
-                                <span class="rank-badge">#2</span>
-                                <div class="game-card-content">
-                                    <h3>Baldur's Gate 3</h3>
-                                    <p>The critically acclaimed RPG that's taking the world by storm.</p>
-                                    <div class="trend down">Trending Down</div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <span class="rank-badge">#2</span>
+                                    <div class="game-card-content">
+                                        <h3>Baldur's Gate 3</h3>
+                                        <p>The critically acclaimed RPG.</p>
+                                        <div class="trend down">Trending Down</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Add more game cards here -->
                     </div>
+                    <button class="scroll-button right" onclick="scrollSection('top-charts', 1)">❯</button>
                 </div>
             </section>
 
             <!-- Game Updates Section -->
             <section class="trending-section">
                 <h2 class="section-title">Game Updates</h2>
-                <div class="game-grid">
-                    <div class="game-card">
-                        <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
-                            <div class="game-card-overlay">
-                                <div class="update-badge">Major Update</div>
-                                <div class="game-card-content">
-                                    <h3>Cyberpunk 2077: Phantom Liberty</h3>
-                                    <p>The game-changing 2.0 update arrives alongside the new expansion.</p>
-                                    <div class="update-info">
-                                        <span class="version">Version 2.0</span>
-                                        <span class="date">September 26, 2023</span>
+                <div class="scroll-container">
+                    <button class="scroll-button left" onclick="scrollSection('game-updates', -1)">❮</button>
+                    <div class="game-row" id="game-updates">
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')">
+                                <div class="game-card-overlay">
+                                    <div class="update-badge">Major Update</div>
+                                    <div class="game-card-content">
+                                        <h3>Cyberpunk 2077</h3>
+                                        <p>2.0 update with new features.</p>
+                                        <div class="update-info">
+                                            <span class="version">2.0</span>
+                                            <span class="date">Sept 26</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Add more game cards here -->
                     </div>
+                    <button class="scroll-button right" onclick="scrollSection('game-updates', 1)">❯</button>
                 </div>
             </section>
 
@@ -145,5 +189,15 @@
             </section>
         </main>
     </div>
+    <script>
+        function scrollSection(sectionId, direction) {
+            const container = document.getElementById(sectionId);
+            const scrollAmount = direction * (container.offsetWidth * 0.8);
+            container.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
