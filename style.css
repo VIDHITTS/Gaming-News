@@ -3,6 +3,10 @@
     --secondary-dark: #3C3D37;
     --accent: #697565;
     --light: #ECDFCC;
+    --purple: #8B5CF6;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --danger: #EF4444;
 }
 
 * {
@@ -22,8 +26,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
-/* Video Banner Styles */
 .video-banner {
     width: 100%;
     height: 500px;
@@ -41,6 +43,7 @@ body {
     height: auto;
     z-index: -1;
 }
+
 
 /* Sidebar Styles */
 .sidebar {
@@ -80,8 +83,8 @@ body {
     background: rgba(236, 223, 204, 0.05);
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links li.active a,
+.nav-links a:hover {
     background: rgba(149, 0, 255, 0.1);
     transform: translateX(10px);
 }
@@ -93,23 +96,370 @@ body {
     margin-left: 280px;
 }
 
-h1 {
+/* Trending Page Specific Styles */
+.trending-section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--purple);
     margin-bottom: 1.5rem;
-    color: var(--light);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
 }
-
-.featured-news {
-    margin-top: 2rem;
-}
-
-.news-grid {
+/* Game Card Grid */
+.game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
     margin-top: 1rem;
 }
 
-.news-card {
+/* Netflix-style Game Cards */
+.game-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-card-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s ease;
+}
+
+.game-card:hover .game-card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.game-card-content {
+    transform: translateY(20px);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.game-card:hover .game-card-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.game-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.game-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Badges and Info */
+.card-badge, .rank-badge, .update-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.card-badge {
+    background: var(--purple);
+    color: white;
+}
+
+.rank-badge {
+    background: var(--warning);
+    color: white;
+}
+
+.update-badge {
+    background: var(--success);
+    color: white;
+}
+
+.release-info, .update-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Debate Card Styles */
+.debate-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(60, 61, 55, 0.25);
+}
+
+.debate-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.debate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(239, 68, 68, 0.9) 0%, rgba(239, 68, 68, 0.5) 100%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.debate-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.debate-poll {
+    margin-top: 1.5rem;
+}
+
+.poll-option {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.poll-option .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.poll-option.against .progress-bar {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.percentage {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* Hot Releases Styles */
+/* .hot-release {
+    position: relative;
+    background: linear-gradient(to right bottom, rgba(139, 92, 246, 0.1), rgba(60, 61, 55, 0.25));
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--purple);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.release-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(236, 223, 204, 0.7);
+} */
+
+/* Top Charts Styles */
+/* .charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.platform-chart {
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.chart-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.chart-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(236, 223, 204, 0.1);
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--purple);
+    width: 40px;
+}
+
+.game {
+    flex: 1;
+}
+
+.trend {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.trend.up {
+    color: var(--success);
+}
+
+.trend.down {
+    color: var(--danger);
+}
+
+.trend.new {
+    color: var(--warning);
+} */
+
+/* Game Updates Styles */
+/* .update {
+    position: relative;
+    background: linear-gradient(to right bottom, rgba(16, 185, 129, 0.1), rgba(60, 61, 55, 0.25));
+}
+
+.update-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--success);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+}
+
+.update-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: rgba(236, 223, 204, 0.7);
+} */
+
+/* Controversies & Debates Styles */
+/* .debate {
+    background: linear-gradient(to right bottom, rgba(239, 68, 68, 0.1), rgba(60, 61, 55, 0.25));
+    padding: 2rem;
+}
+
+.debate-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    color: rgba(236, 223, 204, 0.7);
+}
+
+.debate-poll {
+    margin-top: 1.5rem;
+}
+
+.poll-option {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.poll-option .label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--purple);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.poll-option.against .progress-bar {
+    background: var(--danger);
+}
+
+.percentage {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Base card styles */
+/* .news-card {
     background: rgba(236, 223, 204, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -131,28 +481,9 @@ h1 {
     color: rgba(236, 223, 204, 0.8);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .video-banner,
-    .video-background {
-        width: 100%;
-    }
-}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+} */
