@@ -26,26 +26,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-.video-banner {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    border: solid black;
-}
-
-.video-background {
-    position: absolute;
-    top: -5rem;
-    right: 0;
-    min-height: 100%;
-    width: 81.5vw;
-    height: auto;
-    z-index: -1;
-}
-
-
-/* Sidebar Styles */
 .sidebar {
     width: 280px;
     height: 100vh;
@@ -56,8 +36,107 @@ body {
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(236, 223, 204, 0.1);
     padding: 2rem 1rem;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it stays on top */
 }
+
+.video-banner {
+    margin-left: 280px; /* Push the video content to the right of the sidebar */
+    width: calc(100% - 280px); /* Adjust the video container width */
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it’s behind other content */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); //*this line fades out the video from bottom - by Daksh */
+
+}
+
+
+
+/*  This code is for game of the year image !!! and deatils about it.. dont change it at any cost!! this was soo hard to do!! -By Dakshh */
+
+
+.content-overlay {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    z-index: 3; /* Ensures text and image appear on top */
+    justify-content: center;
+    top: 40%;
+    right: 23%;
+}
+
+/* Game Image */
+.content-overlay img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Details */
+.details {
+    max-width: 400px;
+}
+
+.details h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.platforms span {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.buy-now {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    background-color: #e63946;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #04a949;
+    transform: scale(1.11);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .logo {
     text-align: center;
@@ -362,3 +441,4 @@ body {
         font-size: 1rem;
     }
 }
+
