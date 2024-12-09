@@ -529,10 +529,32 @@ body {
     border-radius: 2%;
     transition: 0.3s;
 }
+.box6{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.box7{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.box8{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
 
-
-
-.box1:hover ,.box2:hover, .box3:hover ,.box4:hover,.box5:hover{
+.box1:hover ,.box2:hover, .box3:hover ,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover,.box9:hover{
     transform: scale(1.03);
 }
 
@@ -540,10 +562,10 @@ body {
 
 .stream-main {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     background-color: transparent;
     width: 1200px;
-    height: 600px;
+    height: 400px;
     justify-content: space-between; 
   }
   
@@ -954,5 +976,26 @@ blockquote {
 .game-row::-webkit-scrollbar-thumb:hover {
     background: rgba(139, 92, 246, 0.5);
 }
+/* 
+Game of the year styling --By Daksh */
 
 
+
+.game_of_year{
+    display: flex;
+    overflow-x: auto; /* this make the images scrollable -- By Daksh*/
+    gap: 10px; 
+    padding: 10px;
+    background-color: transparent;
+    height: 600px;
+    width: 1200px; 
+}
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10 {
+    width: 400px;
+    height: 250px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.g1:hover ,.g2:hover, .g3:hover ,.g4:hover,.g5:hover,.g6:hover,.g7:hover,.g8:hover,.g9:hover,.g10:hover{
+    transform: scale(1.03);
+    opacity: 40%;
