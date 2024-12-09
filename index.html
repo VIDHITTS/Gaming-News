@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="video-banner">
         <div class="fade-out"></div>
         <video autoplay loop muted class="video-background"> 
@@ -55,7 +54,7 @@
                 <img src="el.jpg" alt="Hogwarts Legacy Cover" class="box5">
             </div>
             <br>
-            <h1> Streaming Now</h1>
+            <h1>Streaming Now</h1>
             <br>
             <hr>
             <br>
@@ -65,7 +64,7 @@
                   <div class="overlay">
                     <p class="game-text">PUBG</p>
                     <p class="game-text" id="pubg-viewers">Loading viewers...</p>
-                    <a href="https://www.youtube.com/channel/UCmeKFsXZRKgTotHhWDKfUpA/live" target="_blank"><button class="watch-now">Watch Now</button </a>
+                    <a href="https://www.youtube.com/channel/UCmeKFsXZRKgTotHhWDKfUpA/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
 
@@ -73,7 +72,7 @@
                   <img src="gtav.jpg" alt="GTA V" class="game2">
                   <div class="overlay">
                     <p class="game-text">GTA V</p>
-                    <p class="game-text" id="gta-viewers">Loading viewers...</p>
+                    <p class="game-text" id="gta_v-viewers">Loading viewers...</p>
                     <a href="https://www.youtube.com/channel/UCOquqcRMJmURiGfEnaitptg/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
@@ -99,9 +98,8 @@
         </main>
     </div>
     <script>
-        // Function to fetch and update game viewers
         function updateGameViews(game) {
-            fetch(`../${game}_views.txt`) // Adjust the path as necessary
+            fetch(`../${game}_views.txt`) 
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -119,14 +117,14 @@
     
         // Update viewers every 5 seconds
         setInterval(() => {
-            updateGameViews('gta');
+            updateGameViews('gta_v');
             updateGameViews('pubg');
             updateGameViews('league_of_legends');
             updateGameViews('mobile_legends');
         }, 5000);
     
         // Initial calls to update viewers
-        updateGameViews('gta');
+        updateGameViews('gta_v');
         updateGameViews('pubg');
         updateGameViews('league_of_legends');
         updateGameViews('mobile_legends');
