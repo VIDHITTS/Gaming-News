@@ -20,7 +20,7 @@ wait = WebDriverWait(driver, 10)
 xpaths = {
      "GTA V": '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-shelf-renderer/div[1]/div[2]/ytd-grid-renderer/div[1]/ytd-game-card-renderer[1]/div[1]/ytd-game-details-renderer/a/yt-formatted-string[3]/span[1]',
      "PUBG": '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-shelf-renderer/div[1]/div[2]/ytd-grid-renderer/div[1]/ytd-game-card-renderer[2]/div[1]/ytd-game-details-renderer/a/yt-formatted-string[3]/span[1]',
-     "League of Legends": '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-shelf-renderer/div[1]/div[2]/ytd-grid-renderer/div[1]/ytd-game-card-renderer[3]/div[1]/ytd-game-details-renderer/a/yt-formatted-string[3]/span[1]',
+     "Dragon Quest III HD-2D Remake": '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-shelf-renderer/div[1]/div[2]/ytd-grid-renderer/div[1]/ytd-game-card-renderer[3]/div[1]/ytd-game-details-renderer/a/yt-formatted-string[3]/span[1]',
      "Mobile Legends": '/html/body/ytd-app/div[1]/ytd-page-manager/ytd-browse/ytd-two-column-browse-results-renderer/div[1]/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-shelf-renderer/div[1]/div[2]/ytd-grid-renderer/div[1]/ytd-game-card-renderer[4]/div[1]/ytd-game-details-renderer/a/yt-formatted-string[3]/span[1]'
  }
 
