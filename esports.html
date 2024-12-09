@@ -12,29 +12,145 @@
             <div class="logo">
                 <h2>GameWave</h2>
             </div>
-            
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="trending.html">Trending News</a></li>
-                <li><a href="esports.html">Esports News</a></li>
+                <li><a href="esports.html" class="active">Esports News</a></li>
                 <li><a href="community.html">Community</a></li>
                 <li><a href="guides.html">Guides & Tips</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
         <main class="content">
-            <h1>Esports Coverage</h1>
-            <div class="news-grid">
-                <div class="news-card">
-                    <h3>Tournament Results</h3>
-                    <p>Latest competitive gaming results and highlights.</p>
+            <!-- Section 1: Featured Tournaments -->
+            <section>
+                <h2 class="section-title">What's Happening in Esports</h2>
+                <div class="scroll-container">
+                    <div class="game-row">
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Live Now</div>
+                                    <h3>DOTA 2 International</h3>
+                                    <p>Prize Pool: $40M | Teams: 18</p>
+                                    <button class="watch-now">Watch Live</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-4.0.3')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Upcoming</div>
+                                    <h3>LoL Worlds 2024</h3>
+                                    <p>Location: Seoul, Korea | Date: Oct 2024</p>
+                                    <button class="watch-now">Set Reminder</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card">
+                            <div class="game-card-image" style="background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3')">
+                                <div class="game-card-overlay">
+                                    <div class="card-badge">Upcoming</div>
+                                    <h3>CS:GO Major</h3>
+                                    <p>Location: Stockholm | Date: Dec 2024</p>
+                                    <button class="watch-now">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="news-card">
-                    <h3>Team Updates</h3>
-                    <p>Recent roster changes and team announcements.</p>
+            </section>
+
+            <!-- Section 2: Team Spotlights -->
+            <section>
+                <h2 class="section-title">Meet the Pros</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <img src="https://pbs.twimg.com/media/F_fp4Q1bcAAQ1pr?format=jpg&name=medium" alt="Team Liquid">
+                        <h3>Sentinels</h3>
+                        <p>Sentinels is a North American esports organization renowned for its success in Valorant. They gained global recognition by winning the VCT Masters Reykjavík 2021, the first international Valorant tournament. Known for their star-studded roster, including TenZ, and innovative gameplay, Sentinels are a dominant force in competitive Valorant.</p>
+                        <div class="team-stats">
+                            <span>World Rank #1</span>
+                            <span>$2.5M Earnings</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://admin.esports.gg/wp-content/uploads/2024/09/s1mple--968x544.jpg" alt="s1mple">
+                        <h3>s1mple</h3>
+                        <p>The Greatest of All. S1mple is considered one of the greatest CS:GO players ever, known for his exceptional skill, versatility, and clutch performances. As a key player for Natus Vincere, he has led his team to major victories, including the PGL Major Stockholm 2021. His accolades, including multiple “best player” titles, cement his legendary status in esports</p>
+                        <div class="player-stats">
+                            <span>CS:GO Legend</span>
+                            <span>MVP 2023</span>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://wallpapercave.com/dwp2x/wp8645537.jpg" alt="Faker">
+                        <h3>Sen-Tenz</h3>
+                        <p>The undisputed king of Valorant retired after Champions 2024. TenZ was celebrated for redefining mechanical skill in Valorant and inspiring countless players.As a former CS:GO pro, he transitioned to Valorant and gained fame with Sentinels, leading them to victories like the VCT Masters Reykjavík 2021. </p>
+                        <div class="player-stats">
+                            <span>Valorant</span>
+                            <span>3x World Champ</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Section 3: Latest News -->
+            <section>
+                <h2 class="section-title">Breaking Esports News</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <h3>Major Roster Shuffle</h3>
+                        <p>Top teams announce surprising player transfers ahead of the new season.</p>
+                        <span class="timestamp">2 hours ago</span>
+                        <button class="read-more">Read Full Story</button>
+                    </div>
+                    <div class="news-card">
+                        <h3>Meta Shift Analysis</h3>
+                        <p>How the latest patch changes will affect professional play across all regions.</p>
+                        <span class="timestamp">5 hours ago</span>
+                        <button class="read-more">Read Analysis</button>
+                    </div>
+                    <div class="news-card">
+                        <h3>New Tournament Format</h3>
+                        <p>Major changes coming to international competition structure in 2024.</p>
+                        <span class="timestamp">1 day ago</span>
+                        <button class="read-more">Learn More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Competitive Guides -->
+            <section>
+                <h2 class="section-title">Get Competitive</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <h3>Pro Settings Guide</h3>
+                        <p>Optimize your game settings like the professionals do.</p>
+                        <button class="read-more">View Settings</button>
+                    </div>
+                    <div class="news-card">
+                        <h3>Training Routines</h3>
+                        <p>Daily practice routines used by professional players.</p>
+                        <button class="read-more">Start Training</button>
+                    </div>
+                    <div class="news-card">
+                        <h3>Equipment Guide</h3>
+                        <p>Essential gear recommendations for competitive gaming.</p>
+                        <button class="read-more">View Guide</button>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
+
+    <script>
+        document.querySelectorAll('.game-row').forEach(row => {
+            row.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                row.scrollLeft += e.deltaY;
+            });
+        });
+    </script>
 </body>
 </html>
