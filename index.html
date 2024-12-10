@@ -100,50 +100,52 @@
                 </div>
             </div>
             <br>
-            <h1>Game of the years</h1>
+            <h1>Game of the years from 2024 to 2024</h1>
             <br>
             <hr>
             <br>
+
+            <!-- Game of the year Section -->
             <div class="game_of_year">
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-10a3p5f.jpeg" class="g1">
-                    <div class="overlay1">Game Title 1</div>
+                    <div class="overlay1">Dragon Age: Inquisition</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-8ib3pyo.jpeg" class="g2">
-                    <div class="overlay1">Game Title 2</div>
+                    <div class="overlay1">The Witcher 3: Wild Hunt</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-n3c3p2g.jpeg" class="g3">
-                    <div class="overlay1">Game Title 3</div>
+                    <div class="overlay1">Overwatch</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-10a3p5f.jpeg" class="g4">
-                    <div class="overlay1">Game Title 4</div>
+                    <div class="overlay1">The Legend of Zelda: Breath of the Wild</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-07e3p40.webp" class="g5">
-                    <div class="overlay1">Game Title 5</div>
+                    <div class="overlay1">God of War</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-xof3puo.jpeg" class="g6">
-                    <div class="overlay1">Game Title 6</div>
+                    <div class="overlay1">Sekiro: Shadows Die Twice</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-48g3p26.webp" class="g7">
-                    <div class="overlay1">Game Title 7</div>
+                    <div class="overlay1">The Last of Us Part II</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-4dh3ppu.jpeg" class="g8">
-                    <div class="overlay1">Game Title 8</div>
+                    <div class="overlay1">It Takes Two</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-g0i3pga.jpeg" class="g9">
-                    <div class="overlay1">Game Title 9</div>
+                    <div class="overlay1">Elden Ring</div>
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-9o83x00.jpeg" class="g10">
-                    <div class="overlay1">Game Title 10</div>
+                    <div class="overlay1">Baldur’s Gate 3</div>
                 </div>
             </div>
             
@@ -152,7 +154,9 @@
 
         </main>
     </div>
-    <script>
+    <!-- the below code is for the live view count of games streaming now!.. this only works when you run the app.py file --- By Daksh -->
+    <script> 
+
         function updateGameViews(game) {
             fetch(`../${game}_views.txt`) 
                 .then(response => {
@@ -170,7 +174,7 @@
                 });
         }
     
-        // Update viewers every 5 seconds
+
         setInterval(() => {
             updateGameViews('gta_v');
             updateGameViews('pubg');
@@ -178,7 +182,6 @@
             updateGameViews('mobile_legends');
         }, 5000);
     
-        // Initial calls to update viewers
         updateGameViews('gta_v');
         updateGameViews('pubg');
         updateGameViews('league_of_legends');

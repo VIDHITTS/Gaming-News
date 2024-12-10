@@ -36,13 +36,13 @@ body {
     backdrop-filter: blur(10px);
     border-right: 1px solid rgba(236, 223, 204, 0.1);
     padding: 2rem 1rem;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000; 
 }
 
 .video-banner {
     overflow-x: hidden;
-    margin-left: 280px; /* Push the video content to the right of the sidebar */
-    width: calc(100% - 280px); /* Adjust the video container width */
+    margin-left: 280px; 
+    width: calc(100% - 280px); 
     height: 500px;
     position: relative;
     overflow: hidden;
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Ensure it's behind other content */
+    z-index: 1; 
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
@@ -68,13 +68,13 @@ body {
     position: relative;
     display: flex;
     gap: 2rem;
-    z-index: 3; /* Ensures text and image appear on top */
+    z-index: 3; /* to make text on top */
     justify-content: center;
     top: 40%;
     right: 23%;
 }
 
-/* Game Image */
+
 .content-overlay img {
     width: 200px;
     height: auto;
@@ -83,7 +83,7 @@ body {
     transition: 0.3s;
 }
 
-/* Text Details */
+
 .details {
     max-width: 400px;
 }
@@ -166,14 +166,14 @@ body {
     transform: translateX(10px);
 }
 
-/* Content Styles */
+
 .content {
     flex: 1;
     padding: 2rem;
     margin-left: 280px;
 }
 
-/* Trending Page Specific Styles */
+/* Trending Page styling -- by Sameer */
 .trending-section {
     margin-bottom: 3rem;
     position: relative;
@@ -187,7 +187,7 @@ body {
     border-bottom: 2px solid rgba(139, 92, 246, 0.3);
 }
 
-/* Scroll Container */
+
 .scroll-container {
     position: relative;
     width: 100%;
@@ -199,16 +199,13 @@ body {
     gap: 1.5rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; 
     padding: 1rem 0;
 }
 
-.game-row::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
 
-/* Scroll Buttons */
+
+
 .scroll-button {
     position: absolute;
     top: 50%;
