@@ -529,10 +529,32 @@ body {
     border-radius: 2%;
     transition: 0.3s;
 }
+.box6{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.box7{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.box8{
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
 
-
-
-.box1:hover ,.box2:hover, .box3:hover ,.box4:hover,.box5:hover{
+.box1:hover ,.box2:hover, .box3:hover ,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover,.box9:hover{
     transform: scale(1.03);
 }
 
@@ -540,10 +562,10 @@ body {
 
 .stream-main {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     background-color: transparent;
     width: 1200px;
-    height: 600px;
+    height: 400px;
     justify-content: space-between; 
   }
   
@@ -954,52 +976,29 @@ blockquote {
 .game-row::-webkit-scrollbar-thumb:hover {
     background: rgba(139, 92, 246, 0.5);
 }
+/* 
+Game of the year styling --By Daksh */
 
 
-/* Forum Cards */
-.forum-card {
-    flex: 0 0 350px;
-    background: rgba(60, 61, 55, 0.25);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
 
-.forum-card:hover {
-    transform: translateY(-5px);
-}
-
-.forum-header {
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.forum-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-    padding: 1.5rem;
+.game_of_year{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    overflow-x: auto; /* this make the images scrollable -- By Daksh*/
+    gap: 10px; 
+    padding: 10px;
+    background-color: transparent;
+    height: 600px;
+    width: 1200px; 
 }
-
-.forum-stats {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.7);
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10 {
+    width: 400px;
+    height: 250px;
+    border-radius: 2%;
+    transition: 0.3s;
 }
-
-.forum-content {
-    padding: 1.5rem;
-}
-
-.hot-topics {
-    margin-bottom: 1rem;
+.g1:hover ,.g2:hover, .g3:hover ,.g4:hover,.g5:hover,.g6:hover,.g7:hover,.g8:hover,.g9:hover,.g10:hover{
+    transform: scale(1.03);
+    opacity: 40%;
 }
 
 .topic {
@@ -1098,7 +1097,6 @@ blockquote {
     background: rgba(60, 61, 55, 0.25);
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.2s ease-in-out;
 }
 
 .video-thumbnail {
@@ -1143,18 +1141,10 @@ blockquote {
     background: rgba(60, 61, 55, 0.25);
     transition: transform 0.3s ease;
 }
-.showcase-card-1 {
-    flex: 0 0 500px;
-    border-radius: 15px;
-    overflow: hidden;
-    background: rgba(60, 61, 55, 0.25);
-    transition: transform 0.3s ease;
-}
 
 .showcase-card:hover {
     transform: translateY(-5px);
 }
-
 
 .showcase-image {
     width: 100%;
@@ -1371,6 +1361,83 @@ blockquote {
         flex: 0 0 300px;
     }
 }
-.video-card:hover{
-    transform:scale(1.1);
+
+
+* Forum Cards */
+.forum-card {
+    flex: 0 0 350px;
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.forum-card:hover {
+    transform: translateY(-5px);
+}
+
+.forum-header {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.forum-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.forum-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.forum-content {
+    padding: 1.5rem;
+}
+
+.hot-topics {
+    margin-bottom: 1rem;
+}
+
+.topic {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.topic h4 {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.topic-stats {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.join-forum {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--purple);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-forum:hover {
+    background: rgba(139, 92, 246, 0.8);
 }
