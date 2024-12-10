@@ -999,3 +999,4 @@ Game of the year styling --By Daksh */
 .g1:hover ,.g2:hover, .g3:hover ,.g4:hover,.g5:hover,.g6:hover,.g7:hover,.g8:hover,.g9:hover,.g10:hover{
     transform: scale(1.03);
     opacity: 40%;
+}
