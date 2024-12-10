@@ -1,13 +1,3 @@
-:root {
-    --primary-dark: #181C14;
-    --secondary-dark: #3C3D37;
-    --accent: #697565;
-    --light: #ECDFCC;
-    --purple: #8B5CF6;
-    --success: #10B981;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-}
 
 * {
     margin: 0;
@@ -17,8 +7,8 @@
 }
 
 body {
-    background-color: var(--primary-dark);
-    color: var(--light);
+    background-color: #181C14;
+    color: #ECDFCC;
     min-height: 100vh;
 }
 
@@ -39,7 +29,7 @@ body {
     z-index: 1000; 
 }
 
-.video-banner {
+.viban {
     overflow-x: hidden;
     margin-left: 280px; 
     width: calc(100% - 280px); 
@@ -48,7 +38,7 @@ body {
     overflow: hidden;
 }
 
-.video-background {
+.viback {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -61,28 +51,26 @@ body {
 
 
 
-/*  This code is for game of the year image !!! and deatils about it.. dont change it at any cost!! this was soo hard to do!! -By Dakshh */
+/*  This code is for game of the year image !!! and deatils about it.. dont change it at any cost!! this was soo hard to do!!  */
 
 
-.content-overlay {
+.contanupper {
     position: relative;
     display: flex;
     gap: 2rem;
-    z-index: 3; /* to make text on top */
+    z-index: 3; 
     justify-content: center;
     top: 40%;
     right: 23%;
 }
 
-
-.content-overlay img {
+.contanupper img {
     width: 200px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
-
 
 .details {
     max-width: 400px;
@@ -132,36 +120,36 @@ body {
     
     
 }
-.content-overlay img:hover{
+.contanupper img:hover{
     transform: scale(1.05);
 
 }
 .logo {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--light);
+    color: #ECDFCC;
 }
 
-.nav-links {
+.connect {
     list-style: none;
 }
 
-.nav-links li {
+.connect li {
     margin-bottom: 0.5rem;
 }
 
-.nav-links a {
+.connect a {
     display: block;
     padding: 1rem 1.5rem;
-    color: var(--light);
+    color: #ECDFCC;
     text-decoration: none;
     border-radius: 10px;
     transition: all 0.3s ease;
     background: rgba(236, 223, 204, 0.05);
 }
 
-.nav-links li.active a,
-.nav-links a:hover {
+.connect li.active a,
+.connect a:hover {
     background: rgba(149, 0, 255, 0.1);
     transform: translateX(10px);
 }
@@ -173,15 +161,15 @@ body {
     margin-left: 280px;
 }
 
-/* Trending Page styling -- by Sameer */
-.trending-section {
+/* this is style for trending page*/
+.trending {
     margin-bottom: 3rem;
     position: relative;
 }
 
-.section-title {
+.title{
     font-size: 1.8rem;
-    color: var(--purple);
+    color: #8B5CF6;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid rgba(139, 92, 246, 0.3);
@@ -200,11 +188,9 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none; 
+    -ms-overflow-style: none; 
     padding: 1rem 0;
 }
-
-
-
 
 .scroll-button {
     position: absolute;
@@ -234,9 +220,9 @@ body {
     right: 0;
 }
 
-/* Netflix-style Game Cards */
+
 .game-card {
-    flex: 0 0 300px; /* Fixed width, no growing or shrinking */
+    flex: 0 0 300px; 
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -250,7 +236,7 @@ body {
 
 .game-card-image {
     width: 100%;
-    height: 200px; /* Reduced height */
+    height: 200px; 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -286,7 +272,7 @@ body {
 }
 
 .game-card h3 {
-    font-size: 1.4rem; /* Reduced size */
+    font-size: 1.4rem; 
     margin-bottom: 0.5rem;
     color: white;
 }
@@ -299,8 +285,6 @@ body {
 }
 
 
-
-/* Badges and Info */
 .card-badge, .rank-badge, .update-badge {
     position: absolute;
     top: 0.5rem;
@@ -313,17 +297,17 @@ body {
 }
 
 .card-badge {
-    background: var(--purple);
+    background: #8B5CF6;
     color: white;
 }
 
 .rank-badge {
-    background: var(--warning);
+    background: #F59E0B;
     color: white;
 }
 
 .update-badge {
-    background: var(--success);
+    background: #10B981;
     color: white;
 }
 
@@ -349,27 +333,9 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
-/* this is something */
-.game-row::-webkit-scrollbar {
-    height: 8px;
-}
-
-.game-row::-webkit-scrollbar-track {
-    background: rgba(139, 92, 246, 0.1);
-    border-radius: 4px;
-}
-
-.game-row::-webkit-scrollbar-thumb {
-    background: rgba(139, 92, 246, 0.3);
-    border-radius: 4px;
-}
-
-.game-row::-webkit-scrollbar-thumb:hover {
-    background: rgba(139, 92, 246, 0.5);
-}
 
 
-/* Debate Card Styles */
+
 .debate-card {
     border-radius: 15px;
     overflow: hidden;
@@ -378,7 +344,7 @@ body {
 
 .debate-image {
     width: 100%;
-    height: 300px; /* Reduced height */
+    height: 300px; 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -438,7 +404,6 @@ body {
     font-weight: bold;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -574,9 +539,9 @@ body {
   }
   
   .game1, .game2, .game3, .game4 {
-    width: 100%; /* Ensure images fit their containers */
+    width: 100%; 
     height: 100%;
-    object-fit: cover; /* Ensure the images cover the container */
+    object-fit: cover; 
     transition: transform 0.3s ease, opacity 0.3s ease;
     border-radius: 2%;
 
@@ -623,7 +588,6 @@ body {
     background-color: #e64a19;
   }
 
-/* Featured Article */
 .featured-article {
     margin-bottom: 4rem;
     background: rgba(236, 223, 204, 0.05);
@@ -679,7 +643,6 @@ blockquote {
     font-style: italic;
 }
 
-/* News Grid */
 .news-grid-section {
     margin-bottom: 4rem;
 }
@@ -717,7 +680,6 @@ blockquote {
     font-size: 1.2rem;
 }
 
-/* Trending Topics */
 .trending-topics {
     margin-bottom: 4rem;
 }
@@ -756,7 +718,6 @@ blockquote {
     color: rgba(236, 223, 204, 0.6);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -776,16 +737,14 @@ blockquote {
         height: 300px;
     }
 }
-/* Esports Specific Styles */
 .section-title {
     font-size: 2rem;
-    color: var(--light);
+    color: #ECDFCC;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--purple);
+    border-bottom: 2px solid #8B5CF6;
 }
 
-/* Tournament Cards */
 .scroll-container {
     position: relative;
     width: 100%;
@@ -800,7 +759,7 @@ blockquote {
     padding: 1rem 0;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
-    scrollbar-color: var(--purple) transparent;
+    scrollbar-color: #8B5CF6 transparent;
 }
 
 .game-card {
@@ -840,11 +799,10 @@ blockquote {
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 600;
-    background: var(--purple);
+    background: #8B5CF6;
     color: white;
 }
 
-/* Team and Player Cards */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -874,7 +832,7 @@ blockquote {
 .news-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--light);
+    color: #ECDFCC;
 }
 
 .news-card p {
@@ -883,7 +841,6 @@ blockquote {
     line-height: 1.6;
 }
 
-/* Stats and Info */
 .team-stats,
 .player-stats {
     display: flex;
@@ -900,7 +857,6 @@ blockquote {
     font-size: 0.875rem;
 }
 
-/* Buttons */
 .watch-now,
 .read-more {
     display: inline-block;
@@ -913,12 +869,12 @@ blockquote {
 }
 
 .watch-now {
-    background: var(--danger);
+    background: #EF4444;
     color: white;
 }
 
 .read-more {
-    background: var(--purple);
+    background: #8B5CF6;
     color: white;
     width: 100%;
     margin-top: 1rem;
@@ -930,7 +886,6 @@ blockquote {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -955,24 +910,7 @@ blockquote {
     }
 }
 
-/* Scrollbar Styling */
-.game-row::-webkit-scrollbar {
-    height: 8px;
-}
 
-.game-row::-webkit-scrollbar-track {
-    background: rgba(139, 92, 246, 0.1);
-    border-radius: 4px;
-}
-
-.game-row::-webkit-scrollbar-thumb {
-    background: rgba(139, 92, 246, 0.3);
-    border-radius: 4px;
-}
-
-.game-row::-webkit-scrollbar-thumb:hover {
-    background: rgba(139, 92, 246, 0.5);
-}
 /* 
 Game of the year styling --By Daksh */
 
@@ -1018,7 +956,7 @@ Game of the year styling --By Daksh */
 .join-forum {
     width: 100%;
     padding: 0.75rem;
-    background: var(--purple);
+    background: #8B5CF6;
     border: none;
     border-radius: 8px;
     color: white;
@@ -1031,7 +969,6 @@ Game of the year styling --By Daksh */
     background: rgba(139, 92, 246, 0.8);
 }
 
-/* Social Media Integration */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1047,7 +984,7 @@ Game of the year styling --By Daksh */
 }
 
 .social-tag {
-    background: var(--purple);
+    background: #8B5CF6;
     padding: 0.25rem 0.75rem;
     border-radius: 15px;
     font-size: 0.75rem;
@@ -1074,7 +1011,7 @@ Game of the year styling --By Daksh */
 }
 
 .tweet-content h4 {
-    color: var(--purple);
+    color: #8B5CF6;
     margin-bottom: 0.25rem;
 }
 
@@ -1083,7 +1020,6 @@ Game of the year styling --By Daksh */
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Video Grid */
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1122,7 +1058,6 @@ Game of the year styling --By Daksh */
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Fan Art and Cosplay Showcase */
 .showcase-row {
     display: flex;
     gap: 1.5rem;
@@ -1161,7 +1096,6 @@ Game of the year styling --By Daksh */
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .social-grid {
         grid-template-columns: 1fr;
@@ -1176,9 +1110,6 @@ Game of the year styling --By Daksh */
     }
 }
 
-/* Add these new styles to your existing style.css file */
-
-/* Guide Cards */
 .guides-row {
     display: flex;
     gap: 1.5rem;
@@ -1220,7 +1151,7 @@ Game of the year styling --By Daksh */
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--purple);
+    background: #8B5CF6;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -1244,7 +1175,7 @@ Game of the year styling --By Daksh */
 
 .guide-topics li::before {
     content: "•";
-    color: var(--purple);
+    color: #8B5CF6;
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -1254,7 +1185,7 @@ Game of the year styling --By Daksh */
 .read-guide {
     width: 100%;
     padding: 0.75rem;
-    background: var(--purple);
+    background: #8B5CF6;
     border: none;
     border-radius: 8px;
     color: white;
@@ -1267,7 +1198,6 @@ Game of the year styling --By Daksh */
     background: rgba(139, 92, 246, 0.8);
 }
 
-/* Tier Lists */
 .tier-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1334,7 +1264,7 @@ Game of the year styling --By Daksh */
 .view-full-tier {
     width: 100%;
     padding: 0.75rem;
-    background: var(--purple);
+    background: #8B5CF6;
     border: none;
     border-radius: 8px;
     color: white;
@@ -1348,7 +1278,6 @@ Game of the year styling --By Daksh */
     background: rgba(139, 92, 246, 0.8);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .tier-grid {
         grid-template-columns: 1fr;
@@ -1360,7 +1289,7 @@ Game of the year styling --By Daksh */
 }
 
 
-/* Forum wale card Cards */
+
 .forum-card {
     flex: 0 0 350px;
     background: rgba(60, 61, 55, 0.25);
@@ -1383,7 +1312,7 @@ Game of the year styling --By Daksh */
 .forum-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(54, 52, 52, 0.5), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -1426,7 +1355,7 @@ Game of the year styling --By Daksh */
 .join-forum {
     width: 100%;
     padding: 0.75rem;
-    background: var(--purple);
+    background: #8B5CF6;
     border: none;
     border-radius: 8px;
     color: white;
@@ -1438,6 +1367,7 @@ Game of the year styling --By Daksh */
 .join-forum:hover {
     background: rgba(139, 92, 246, 0.8);
 }
+/* this is the styling of about page by Anirudh */
 .about-section {
     background-color: #615f5f;
     border-radius: 8px;
@@ -1458,7 +1388,6 @@ Game of the year styling --By Daksh */
     color: #7f8c8d;
 }
 
-/* Team Section */
 .team-section {
     margin-top: 40px;
 }
@@ -1467,13 +1396,18 @@ Game of the year styling --By Daksh */
     font-size: 28px;
     color: #34495e;
     margin-bottom: 20px;
+    font-size: 7rem;
+    margin-left: 150px;
+    margin-bottom: 50px;
 }
 
 .team-members {
     display: flex;
-    justify-content: space-between;
+    width: 75vw;
+    justify-content: space-around;
     gap: 30px;
     margin-top: 20px;
+    margin-left: 120px;
 }
 
 .team-member {
@@ -1494,4 +1428,16 @@ Game of the year styling --By Daksh */
     font-size: 18px;
     font-weight: bold;
     color: #2c3e50;
+}
+
+.abt-team{
+    align-self: center;
+}
+
+.abt-team h3{
+    text-align: center;
+}
+.abt-container{
+    justify-self: center;
+    
 }
