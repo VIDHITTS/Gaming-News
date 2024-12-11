@@ -1,1 +1,1 @@
-Contribue to this website!
+Contribute to this website!
