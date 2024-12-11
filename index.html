@@ -73,7 +73,7 @@
                   <img src="pubg.jpg" alt="PUBG" class="game1">
                   <div class="overlay">
                     <p class="game-text">PUBG</p>
-                    <p class="game-text" id="pubg-viewers">Loading viewers...</p>
+                    <p class="game-text" id="1st-viewers">Loading viewers...</p>
                     <a href="https://www.youtube.com/channel/UCmeKFsXZRKgTotHhWDKfUpA/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
@@ -82,7 +82,7 @@
                   <img src="https://m.media-amazon.com/images/I/51MFu2e82VL._AC_UF894,1000_QL80_.jpg" alt="GTA V" class="game2">
                   <div class="overlay">
                     <p class="game-text">GTA V</p>
-                    <p class="game-text" id="gta_v-viewers">Loading viewers...</p>
+                    <p class="game-text" id="2nd-viewers">Loading viewers...</p>
                     <a href="https://www.youtube.com/channel/UCOquqcRMJmURiGfEnaitptg/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
@@ -91,7 +91,7 @@
                   <img src="league-legends.png" alt="League of Legends" class="game3">
                   <div class="overlay">
                     <p class="game-text">League of Legends</p>
-                    <p class="game-text" id="league_of_legends-viewers">Loading viewers...</p>
+                    <p class="game-text" id="3rd-viewers">Loading viewers...</p>
                     <a href="https://www.youtube.com/channel/UCZtmNrG53nmbq-Ww2VJrxEQ/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
@@ -100,7 +100,7 @@
                   <img src="mobilel-egends.jpg" alt="Mobile Legends" class="game4">
                   <div class="overlay">
                     <p class="game-text">Mobile Legends</p>
-                    <p class="game-text" id="mobile_legends-viewers">Loading viewers...</p>
+                    <p class="game-text" id="4th-viewers">Loading viewers...</p>
                     <a href="https://www.youtube.com/channel/UCEH7P7kyJIkS_gJf93VYbmg/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
@@ -184,17 +184,17 @@
     
         // Update viewers every 5 seconds
         setInterval(() => {
-            updateGameViews('gta_v');
-            updateGameViews('pubg');
-            updateGameViews('league_of_legends');
-            updateGameViews('mobile_legends');
+            updateGameViews('1st');
+            updateGameViews('2nd');
+            updateGameViews('3rd');
+            updateGameViews('4th');
         }, 5000);
     
         // Initial calls to update viewers
-        updateGameViews('gta_v');
-        updateGameViews('pubg');
-        updateGameViews('league_of_legends');
-        updateGameViews('mobile_legends');
+        updateGameViews('1st');
+        updateGameViews('2nd');
+        updateGameViews('3rd');
+        updateGameViews('4th');
     </script>
 </body>
 </html>
