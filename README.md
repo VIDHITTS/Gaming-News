@@ -22,7 +22,7 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 
 - [Python](https://www.python.org/) (version 3.8 or later)
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (optional for frontend dependencies)
+
 
 ### Installation 🛠️
 
@@ -82,8 +82,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries or support, please reach out to:
 
-- **Email**: [your-email@example.com]
-- **GitHub**: [yourusername](https://github.com/yourusername)
+- **Email**: [mrgear111@gmail.com]
+- **GitHub**: [@mrgear111](https://github.com/mrgear111)
 
 ---
 
