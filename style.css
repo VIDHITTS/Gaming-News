@@ -23,10 +23,12 @@ body {
     left: 0;
     top: 0;
     background: rgba(60, 61, 55, 0.25);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border-right: 1px solid rgba(236, 223, 204, 0.1);
-    padding: 2rem 1rem;
-    z-index: 1000; 
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .viban {
