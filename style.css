@@ -1520,3 +1520,165 @@ Game of the year styling --By Daksh */
         grid-template-columns: 1fr;
     }
 }
+
+
+
+.game-awards-section {
+    margin-bottom: 4rem;
+    background: rgba(60, 61, 55, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.awards-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.major-award {
+    grid-column: 1 / -1;
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.major-award:hover {
+    transform: scale(1.02);
+}
+
+.award-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.award-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.award-overlay h3 {
+    font-size: 2.5rem;
+    color: #8B5CF6;
+    margin-bottom: 1rem;
+}
+
+.awards-subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.award-card {
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-card h3 {
+    color: #8B5CF6;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.winner {
+    margin-top: 1rem;
+}
+
+.winner h4 {
+    color: #ECDFCC;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.winner p {
+    color: rgba(236, 223, 204, 0.7);
+    font-size: 0.9rem;
+}
+.awards-subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .major-award {
+        height: 300px;
+    }
+
+    .award-overlay h3 {
+        font-size: 2rem;
+    }
+
+    .awards-subgrid {
+        grid-template-columns: 1fr;
+    }
+    .award-thumbnail {
+        height: 100px;
+    }
+    
+    .awards-subgrid {
+        grid-template-columns: 1fr;
+    }
+}
+.award-thumbnail {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+}
+
+.award-card {
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-card h3 {
+    color: #8B5CF6;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.winner {
+    margin-top: auto;
+}
+
+.winner h4 {
+    color: #ECDFCC;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.winner p {
+    color: rgba(236, 223, 204, 0.7);
+    font-size: 0.9rem;
+}
