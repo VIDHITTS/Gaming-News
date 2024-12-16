@@ -1149,16 +1149,6 @@ Game of the year styling --By Daksh */
     justify-content: flex-end;
 }
 
-.guide-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #8B5CF6;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
 
 .guide-content {
     padding: 1.5rem;
