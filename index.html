@@ -164,7 +164,7 @@
         </main>
     </div>
      <!-- the below code is for the live view count of games streaming now!.. this only works when you run the app.py file --- By Daksh -->
-    <script>
+    <!-- <script>
 
         
         function updateGameViews(game) {
@@ -197,6 +197,61 @@
         updateGameViews('2nd');
         updateGameViews('3rd');
         updateGameViews('4th');
+    </script> -->
+
+
+    <script>
+        function updateGameViews(game) {
+            // Fetch viewer count
+            fetch(`../${game}_views.txt`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(`${game}-viewers`).innerText = data;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    document.getElementById(`${game}-viewers`).innerText = "Error loading viewers";
+                });
+        }
+    
+        function updateGameImage(game) {
+            // Fetch image URL
+            fetch(`../${game}_image_url.txt`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(url => {
+                    document.querySelector(`.game-container img.game2`).src = url.trim(); // Update img src
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        }
+    
+        // Update viewers and images every 5 seconds
+        setInterval(() => {
+            updateGameViews('1st');
+            updateGameViews('2nd');
+            updateGameViews('3rd');
+            updateGameViews('4th');
+            updateGameImage('1st'); // Update the image URL for '1st'
+        }, 5000);
+    
+        // Initial calls to update viewers and images
+        updateGameViews('1st');
+        updateGameViews('2nd');
+        updateGameViews('3rd');
+        updateGameViews('4th');
+        updateGameImage('1st'); // Update the image URL for '1st'
     </script>
+    
 </body>
 </html>
