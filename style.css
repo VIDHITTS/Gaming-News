@@ -1681,6 +1681,10 @@ Game of the year styling --By Daksh */
 }
 
 .winner p {
-    color: rgba(236, 223, 204, 0.7);
+    color: rgba(189, 167, 134, 0.7);
     font-size: 0.9rem;
+}
+.list{
+    text-decoration: none;
+    color: #f5f4df;
 }
