@@ -1551,6 +1551,7 @@ Game of the year styling --By Daksh */
     background-size: cover;
     background-position: center;
     overflow: visible;
+    
 }
 
 .award-overlay {
@@ -1561,13 +1562,16 @@ Game of the year styling --By Daksh */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
 }
 
 .award-overlay h3 {
     font-size: 2.5rem;
     color: #8B5CF6;
     margin-bottom: 1rem;
+    
 }
+
 
 .awards-subgrid {
     display: grid;
@@ -1614,7 +1618,7 @@ Game of the year styling --By Daksh */
     gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .major-award {
         height: 300px;
     }
@@ -1633,7 +1637,7 @@ Game of the year styling --By Daksh */
     .awards-subgrid {
         grid-template-columns: 1fr;
     }
-}
+} */
 .award-thumbnail {
     width: 100%;
     height: 120px;
