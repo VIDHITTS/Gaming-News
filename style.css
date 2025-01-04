@@ -1618,7 +1618,7 @@ Game of the year styling --By Daksh */
     gap: 1.5rem;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .major-award {
         height: 300px;
     }
@@ -1637,7 +1637,7 @@ Game of the year styling --By Daksh */
     .awards-subgrid {
         grid-template-columns: 1fr;
     }
-} */
+}
 .award-thumbnail {
     width: 100%;
     height: 120px;
