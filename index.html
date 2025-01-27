@@ -11,12 +11,12 @@
     <div class="viban">
         <div class="fade-out"></div>
         <video autoplay loop muted class="viback"> 
-          <source src="t.mp4" type="video/mp4">
+          <source src="cc/t.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
         <div class="contanupper">
-            <img src="new.png" alt="Hogwarts Legacy Cover">
+            <img src="cc/new.png" alt="Hogwarts Legacy Cover">
             <div class="details">
                 <h1>Astro Bot</h1>
                 <p>Astro Bot is a 3D platformer where the player controls the title character, a small robot named Astro Bot, through the use of the DualSense controller. Astro's core moveset is identical to previous entries, maintaining his ability to jump, hover, punch and spin-attack.</p>
@@ -67,11 +67,11 @@
         <main class="content"> 
             <h1>Top Trending Games of Year-2024</h1>
             <div class="box-main">
-                <img src="b.webp" alt="Hogwarts Legacy Cover" class="box1">
-                <img src="c.jpg" alt="Hogwarts Legacy Cover" class="box2"> 
-                <img src="f.jpg" alt="Hogwarts Legacy Cover" class="box3">
-                <img src="bl.jpg" alt="Hogwarts Legacy Cover" class="box4">
-                <img src="el.jpg" alt="Hogwarts Legacy Cover" class="box5">
+                <img src="cc/b.webp" alt="Hogwarts Legacy Cover" class="box1">
+                <img src="cc/c.jpg" alt="Hogwarts Legacy Cover" class="box2"> 
+                <img src="cc/f.jpg" alt="Hogwarts Legacy Cover" class="box3">
+                <img src="cc/bl.jpg" alt="Hogwarts Legacy Cover" class="box4">
+                <img src="cc/el.jpg" alt="Hogwarts Legacy Cover" class="box5">
                 <img src="https://i.pinimg.com/474x/9e/66/0d/9e660db347d763a413cbbf0c0d675fef.jpg" alt="Hogwarts Legacy Cover" class="box6">
                 <img src="https://preview.redd.it/final-fantasy-vii-rebirth-has-been-rated-t-for-teen-v0-h3hs18whn40c1.jpg?width=640&crop=smart&auto=webp&s=7cee66a7ae749b8f7a1be27796ff58dd0997801f" alt="Hogwarts Legacy Cover" class="box7">
                 <img src="https://i.pinimg.com/736x/d5/66/35/d56635698589a94481e9620acf8528d4.jpg" alt="Hogwarts Legacy Cover" class="box8">
@@ -84,7 +84,7 @@
             <br>
             <div class="stream-main">
                 <div class="game-container">
-                  <img src="pubg.jpg" alt="PUBG" class="game1">
+                  <img src="cc/pubg.jpg" alt="PUBG" class="game1">
                   <div class="overlay">
                     <p class="game-text">PUBG</p>
                     <p class="game-text" id="1st-viewers">Loading viewers...</p>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div class="game-container">
-                  <img src="league-legends.png" alt="League of Legends" class="game3">
+                  <img src="cc/league-legends.png" alt="League of Legends" class="game3">
                   <div class="overlay">
                     <p class="game-text">League of Legends</p>
                     <p class="game-text" id="3rd-viewers">Loading viewers...</p>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="game-container">
-                  <img src="mobilel-egends.jpg" alt="Mobile Legends" class="game4">
+                  <img src="cc/mobilel-egends.jpg" alt="Mobile Legends" class="game4">
                   <div class="overlay">
                     <p class="game-text">Mobile Legends</p>
                     <p class="game-text" id="4th-viewers">Loading viewers...</p>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="image-container">
                     <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-9o83x00.jpeg" class="g10">
-                    <div class="overlay1">Baldur’s Gate 3 (2023)</div>
+                    <div class="overlay1">Baldur's Gate 3 (2023)</div>
                 </div>
                 <div class="image-container">
                     <img src="https://wallpapercg.com/media/ts_orig/27095.webp" class="g8">
@@ -219,8 +219,8 @@
 
     <script>
         function updateGameViews(game) {
-            // Fetch viewer count
-            fetch(`../${game}_views.txt`)
+            // Update fetch path to use txts folder
+            fetch(`txts/${game}_views.txt`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -237,8 +237,8 @@
         }
     
         function updateGameImage(game) {
-            // Fetch image URL
-            fetch(`../${game}_image_url.txt`)
+            // Update fetch path to use txts folder
+            fetch(`txts/${game}_image_url.txt`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -246,7 +246,7 @@
                     return response.text();
                 })
                 .then(url => {
-                    document.querySelector(`.game-container img.game2`).src = url.trim(); // Update img src
+                    document.querySelector(`.game-container img.game2`).src = url.trim();
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
@@ -259,7 +259,7 @@
             updateGameViews('2nd');
             updateGameViews('3rd');
             updateGameViews('4th');
-            updateGameImage('1st'); // Update the image URL for '1st'
+            updateGameImage('1st');
         }, 5000);
     
         // Initial calls to update viewers and images
@@ -267,7 +267,7 @@
         updateGameViews('2nd');
         updateGameViews('3rd');
         updateGameViews('4th');
-        updateGameImage('1st'); // Update the image URL for '1st'
+        updateGameImage('1st');
     </script>
     
 </body>

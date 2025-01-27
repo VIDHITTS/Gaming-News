@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+import os
 
 # Setup ChromeOptions for headless mode
 chrome_options = Options()
@@ -43,6 +44,15 @@ xpaths = {
     }
 }
 
+def write_to_file(filename, content):
+    # Create txts directory if it doesn't exist
+    if not os.path.exists('txts'):
+        os.makedirs('txts')
+    
+    # Write to file in txts folder
+    with open(f'txts/{filename}', 'w') as f:
+        f.write(str(content))
+
 try:
     while True:
         for game, paths in xpaths.items():
@@ -59,11 +69,8 @@ try:
                 views_filename = f'{game.lower().replace(" ", "_")}_views.txt'
                 image_filename = f'{game.lower().replace(" ", "_")}_image_url.txt'
 
-                with open(views_filename, 'w') as vf:
-                    vf.write(views)
-
-                with open(image_filename, 'w') as imf:
-                    imf.write(image_url)
+                write_to_file(views_filename, views)
+                write_to_file(image_filename, image_url)
 
                 print(f"Updated {game}: Views = {views}, Image URL = {image_url}")
 
