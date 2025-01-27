@@ -14,7 +14,7 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Python (Flask/Django)
 - **Database**: PostgreSQL
-- **Hosting**: [Your Hosting Service, e.g., Heroku, AWS, Vercel]
+- **Hosting**: [Netlify]
 
 ## Getting Started 🚀
 
