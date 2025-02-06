@@ -1,0 +1,30 @@
+{
+  "name": "gaming-news",
+  "version": "1.0.0",
+  "description": "Welcome to the repository for the Play-zone Area! This project is dedicated to delivering the latest updates, news, and insights about the gaming world. Our goal is to create a hub for gamers to stay informed about industry trends, upcoming releases, and more.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrgear111/Gaming-News.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mrgear111/Gaming-News/issues"
+  },
+  "homepage": "https://github.com/mrgear111/Gaming-News#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
