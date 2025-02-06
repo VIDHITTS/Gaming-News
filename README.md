@@ -12,17 +12,15 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 ## Tech Stack 🛠️
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask/Django)
-- **Database**: PostgreSQL
+- **Backend**: Node.js (Express.js)
 - **Hosting**: [Netlify]
 
 ## Getting Started 🚀
 
-### Prerequisites 📋
+### Prerequisites 👋
 
-- [Python](https://www.python.org/) (version 3.8 or later)
+- [Node.js](https://nodejs.org/) (version 16 or later)
 - [Git](https://git-scm.com/)
-
 
 ### Installation 🛠️
 
@@ -32,24 +30,17 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
    cd gaming-news-website
    ```
 
-2. Set up the virtual environment:
+2. Install backend dependencies:
    ```bash
-   python -m venv venv
-   source venv/bin/activate # For Linux/Mac
-   venv\Scripts\activate   # For Windows
+   npm install
    ```
 
-3. Install backend dependencies:
+3. Run the server:
    ```bash
-   pip install -r requirements.txt
+   npm start
    ```
 
-4. Run the server:
-   ```bash
-   python manage.py runserver
-   ```
-
-5. Open the website at `http://127.0.0.1:8000/` in your browser.
+4. Open the website at `http://localhost:3000/` in your browser.
 
 ## Contribution Guidelines 🤝
 
@@ -74,7 +65,7 @@ We welcome contributions from the community! To get started:
 
 If you encounter any bugs or have feature requests, please [open an issue](https://github.com/yourusername/gaming-news-website/issues).
 
-## License 📄
+## License 📝
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
@@ -88,3 +79,4 @@ For any inquiries or support, please reach out to:
 ---
 
 Thank you for visiting the Gaming News Website repository! Happy gaming! 🎮
+
