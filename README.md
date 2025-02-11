@@ -6,7 +6,7 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 
 - **Latest Gaming News**: Regular updates on trending gaming topics.
 - **Game Reviews**: In-depth reviews to help gamers decide their next play.
-- **Upcoming Releases**: A calendar of the most anticipated game launches.
+- **Upcoming Releases**: A c alendar of the most anticipated game launches.
 - **Player Communities**: Dedicated sections for player discussions and feedback.
 
 ## Tech Stack 🛠️
