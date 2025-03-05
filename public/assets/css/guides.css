@@ -1,0 +1,336 @@
+
+
+.guides-section {
+    margin-bottom: 4rem;
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+.scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.scroll-container {
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.guides-row {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.guide-card {
+    flex: 0 0 350px;
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-header {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.guide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.guide-content {
+    padding: 1.5rem;
+}
+
+.guide-topics {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.guide-topics li {
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+}
+
+.guide-topics li::before {
+    content: "•";
+    color: #8B5CF6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.read-guide {
+    width: 100%;
+    padding: 0.75rem;
+    background: #8B5CF6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-guide:hover {
+    background: rgba(139, 92, 246, 0.8);
+}
+
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.tier-card {
+    background: rgba(60, 61, 55, 0.25);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+}
+
+.tier-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.tier-label {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.s-tier {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.s-tier .tier-label {
+    background: rgba(255, 215, 0, 0.2);
+    color: gold;
+}
+
+.a-tier {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.a-tier .tier-label {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+}
+
+.tier-content {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tier-content img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.view-full-tier {
+    width: 100%;
+    padding: 0.75rem;
+    background: #8B5CF6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-full-tier:hover {
+    background: rgba(139, 92, 246, 0.8);
+}
+.section-title {
+    font-size: 2rem;
+    color: #ECDFCC;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8B5CF6;
+}
+.game-row {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #8B5CF6 transparent;
+}
+.game-row {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    padding: 1rem 0;
+}
+.game-row {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.game-card {
+    flex: 0 0 300px; 
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-card-image {
+    width: 100%;
+    height: 200px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s ease;
+}
+
+.game-card:hover .game-card-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.game-card-content {
+    transform: translateY(20px);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.game-card:hover .game-card-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.game-card h3 {
+    font-size: 1.4rem; 
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.game-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+.game-card {
+    flex: 0 0 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(60, 61, 55, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .guides-row {
+        flex-direction: column;
+    }
+
+    .guide-card {
+        flex: 0 0 100%;
+    }
+
+    .tier-grid {
+        grid-template-columns: 1fr;
+    }
+}
