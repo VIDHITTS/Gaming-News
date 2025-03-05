@@ -1,0 +1,144 @@
+/* common.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #181C14;
+    color: #ECDFCC;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, rgba(28, 25, 23, 0.98) 0%, rgba(17, 16, 15, 0.98) 100%);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(139, 92, 246, 0.2);
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #8B5CF6;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.logo h2 {
+    color: #ECDFCC;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.connect {
+    list-style: none;
+    padding: 0;
+}
+
+.connect li {
+    margin-bottom: 0.8rem;
+}
+
+.connect li a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    color: #ECDFCC;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.connect li a i {
+    font-size: 1.2rem;
+    min-width: 25px;
+    color: #8B5CF6;
+}
+
+.connect li a:hover {
+    background: rgba(139, 92, 246, 0.2);
+    transform: translateX(5px);
+}
+
+.connect li a:hover i {
+    transform: scale(1.2);
+}
+
+.connect li a.active {
+    background: rgba(139, 92, 246, 0.25);
+    border-left: 4px solid #8B5CF6;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(139, 92, 246, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(139, 92, 246, 0.2);
+    }
+}
+
+.connect li a:hover {
+    animation: glow 2s infinite;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 280px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ECDFCC;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8B5CF6;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}

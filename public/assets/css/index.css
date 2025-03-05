@@ -1,0 +1,234 @@
+.viban {
+    overflow-x: hidden;
+    margin-left: 280px; 
+    width: calc(100% - 280px); 
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.viback {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.contanupper {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    z-index: 3; 
+    justify-content: center;
+    top: 40%;
+    right: 23%;
+}
+
+.contanupper img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.details {
+    max-width: 400px;
+}
+
+.details h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.platforms span {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.buy-now {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+    background-color: #e63946;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.buy-now:hover {
+    background-color: #04a949;
+    transform: scale(1.11);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.platforms span:hover {
+    transform: scale(1.11);
+    background-color: rgb(118, 50, 50);
+}
+
+.contanupper img:hover {
+    transform: scale(1.05);
+}
+
+.box-main {
+    display: flex;
+    overflow-x: auto; /* this make the images scrollable -- By Daksh */
+    gap: 10px; 
+    padding: 10px;
+    background-color: transparent;
+    width: 1200px; 
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+    margin-top: 5px;
+    margin-left: 2px;
+    height: 400px;
+    width: 270px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+
+.box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover, .box7:hover, .box8:hover, .box9:hover {
+    transform: scale(1.03);
+}
+
+.stream-main {
+    display: flex;
+    gap: 30px;
+    background-color: transparent;
+    width: 1200px;
+    height: 400px;
+    justify-content: space-between; 
+}
+
+.game-container {
+    position: relative;
+    width: 300px; 
+    height: 400px; 
+    overflow: hidden;
+}
+
+.game1, .game2, .game3, .game4 {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 2%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.game_of_year{
+    display: flex;
+    overflow-x: auto; /* this make the images scrollable -- By Daksh*/
+    gap: 10px; 
+    padding: 10px;
+    background-color: transparent;
+    height: 600px;
+    width: 1200px; 
+}
+.g1, .g2, .g3, .g4, .g5, .g6, .g7, .g8, .g9, .g10 {
+    width: 400px;
+    height: 250px;
+    border-radius: 2%;
+    transition: 0.3s;
+}
+.g1:hover ,.g2:hover, .g3:hover ,.g4:hover,.g5:hover,.g6:hover,.g7:hover,.g8:hover,.g9:hover,.g10:hover{
+    transform: scale(1.03);
+    opacity: 40%;
+}
+
+
+.game-container:hover .overlay {
+    opacity: 1;
+}
+
+.game-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.watch-now {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.watch-now:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .game-card {
+        flex: 0 0 300px;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .game1, .game2, .game3, .game4 {
+        height: auto;
+    }
+
+    .stream-main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
