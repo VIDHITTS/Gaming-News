@@ -6,13 +6,16 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 
 - **Latest Gaming News**: Regular updates on trending gaming topics.
 - **Game Reviews**: In-depth reviews to help gamers decide their next play.
-- **Upcoming Releases**: A c alendar of the most anticipated game launches.
+- **Upcoming Releases**: A calendar of the most anticipated game launches.
 - **Player Communities**: Dedicated sections for player discussions and feedback.
+- **Live Game Statistics**: Real-time data on streaming games and viewer counts.
 
 ## Tech Stack 🛠️
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js (Express.js)
+- **Backend**: 
+  - Python (Selenium for data scraping)
+  - Node.js (Express.js for serving content)
 - **Hosting**: [Netlify]
 
 ## Getting Started 🚀
@@ -20,19 +23,22 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
 ### Prerequisites 👋
 
 - [Node.js](https://nodejs.org/) (version 16 or later)
+- [Python](https://www.python.org/) (version 3.8 or later)
 - [Git](https://git-scm.com/)
+- [Chrome Browser](https://www.google.com/chrome/) (for WebDriver)
 
 ### Installation 🛠️
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/gaming-news-website.git
-   cd gaming-news-website
+   git clone https://github.com/mrgear111/playzone-area.git
+   cd playzone-area
    ```
 
 2. Install backend dependencies:
    ```bash
    npm install
+   pip install -r requirements.txt
    ```
 
 3. Run the server:
@@ -40,7 +46,12 @@ Welcome to the repository for the **Play-zone Area**! This project is dedicated 
    npm start
    ```
 
-4. Open the website at `http://localhost:3000/` in your browser.
+4. In a separate terminal, run the Python scraper:
+   ```bash
+   python app.py
+   ```
+
+5. Open the website at `http://localhost:3000/` in your browser.
 
 ## Contribution Guidelines 🤝
 
@@ -63,7 +74,7 @@ We welcome contributions from the community! To get started:
 
 ## Issues 🐞
 
-If you encounter any bugs or have feature requests, please [open an issue](https://github.com/yourusername/gaming-news-website/issues).
+If you encounter any bugs or have feature requests, please [open an issue](https://github.com/mrgear111/playzone-area/issues).
 
 ## License 📝
 
@@ -78,5 +89,5 @@ For any inquiries or support, please reach out to:
 
 ---
 
-Thank you for visiting the Gaming News Website repository! Happy gaming! 🎮
+Thank you for visiting the Play-zone Area repository! Happy gaming! 🎮
 

@@ -69,14 +69,14 @@
         <main class="content"> 
             <h1>Top Trending Games of Year-2024</h1>
             <div class="box-main">
-                <img src="cc/b.webp" alt="Hogwarts Legacy Cover" class="box1">
-                <img src="cc/c.jpg" alt="Hogwarts Legacy Cover" class="box2"> 
-                <img src="cc/f.jpg" alt="Hogwarts Legacy Cover" class="box3">
-                <img src="cc/bl.jpg" alt="Hogwarts Legacy Cover" class="box4">
-                <img src="cc/el.jpg" alt="Hogwarts Legacy Cover" class="box5">
-                <img src="https://i.pinimg.com/474x/9e/66/0d/9e660db347d763a413cbbf0c0d675fef.jpg" alt="Hogwarts Legacy Cover" class="box6">
-                <img src="https://preview.redd.it/final-fantasy-vii-rebirth-has-been-rated-t-for-teen-v0-h3hs18whn40c1.jpg?width=640&crop=smart&auto=webp&s=7cee66a7ae749b8f7a1be27796ff58dd0997801f" alt="Hogwarts Legacy Cover" class="box7">
-                <img src="https://i.pinimg.com/736x/d5/66/35/d56635698589a94481e9620acf8528d4.jpg" alt="Hogwarts Legacy Cover" class="box8">
+                <img src="assets/img/b.webp" alt="Hogwarts Legacy" class="box1">
+                <img src="assets/img/c.jpg" alt="Astro Bot" class="box2"> 
+                <img src="assets/img/f.jpg" alt="Final Fantasy VII" class="box3">
+                <img src="assets/img/bl.jpg" alt="Baldur's Gate 3" class="box4">
+                <img src="assets/img/el.jpg" alt="Elden Ring" class="box5">
+                <img src="https://i.pinimg.com/474x/9e/66/0d/9e660db347d763a413cbbf0c0d675fef.jpg" alt="Hellblade 2" class="box6">
+                <img src="https://preview.redd.it/final-fantasy-vii-rebirth-has-been-rated-t-for-teen-v0-h3hs18whn40c1.jpg?width=640&crop=smart&auto=webp&s=7cee66a7ae749b8f7a1be27796ff58dd0997801f" alt="FF7 Rebirth" class="box7">
+                <img src="https://i.pinimg.com/736x/d5/66/35/d56635698589a94481e9620acf8528d4.jpg" alt="Star Wars Outlaws" class="box8">
                 
             </div>
             <br>
@@ -113,7 +113,7 @@
                 </div>
 
                 <div class="game-container">
-                  <img src="assets/img/" alt="Mobile Legends" class="game4">
+                  <img src="assets/img/mobile_legends.jpg" alt="Mobile Legends" class="game4">
                   <div class="overlay">
                     <p class="game-text">Mobile Legends</p>
                     <p class="game-text" id="4th-viewers">Loading viewers...</p>
@@ -221,8 +221,8 @@
 
     <script>
         function updateGameViews(game) {
-            // Update fetch path to use txts folder
-            fetch(`txts/${game}_views.txt`)
+            // Update fetch path to use data folder
+            fetch(`data/${game}_views.txt`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -239,8 +239,8 @@
         }
     
         function updateGameImage(game) {
-            // Update fetch path to use txts folder
-            fetch(`txts/${game}_image_url.txt`)
+            // Update fetch path to use data folder
+            fetch(`data/${game}_image_url.txt`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -248,7 +248,7 @@
                     return response.text();
                 })
                 .then(url => {
-                    document.querySelector(`.game-container img.game2`).src = url.trim();
+                    document.querySelector(`.game-container img.game${game[0]}`).src = url.trim();
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
@@ -262,6 +262,9 @@
             updateGameViews('3rd');
             updateGameViews('4th');
             updateGameImage('1st');
+            updateGameImage('2nd');
+            updateGameImage('3rd');
+            updateGameImage('4th');
         }, 5000);
     
         // Initial calls to update viewers and images
@@ -270,6 +273,9 @@
         updateGameViews('3rd');
         updateGameViews('4th');
         updateGameImage('1st');
+        updateGameImage('2nd');
+        updateGameImage('3rd');
+        updateGameImage('4th');
     </script>
     
 </body>
