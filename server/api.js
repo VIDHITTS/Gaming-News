@@ -3,10 +3,8 @@ const axios = require('axios');
 const router = express.Router();
 require('dotenv').config();
 
-// Get API key from environment variables
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 
-// API endpoint for live streams
 router.get('/live-streams', async (req, res) => {
     if (!YOUTUBE_API_KEY) {
         return res.status(500).json({ 

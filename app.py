@@ -8,7 +8,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-# Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -19,7 +18,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Ensure data directory exists
 data_dir = os.path.join(os.path.dirname(__file__), 'public', 'data')
 os.makedirs(data_dir, exist_ok=True)
 
@@ -30,13 +28,11 @@ def write_to_file(filename, content):
         f.write(content)
     return filepath
 
-# Setup Chrome options
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 
-# Start the WebDriver
 try:
     driver = webdriver.Chrome(options=chrome_options)
     wait = WebDriverWait(driver, 10)
@@ -45,7 +41,6 @@ except Exception as e:
     logger.error(f"Failed to initialize Chrome WebDriver: {e}")
     exit(1)
 
-# Define xpaths for each game
 xpaths = {
     "Valorant": {
         "views": "//*[@id='game-views-count']",
@@ -69,19 +64,15 @@ try:
     while True:
         for game, paths in xpaths.items():
             try:
-                # Navigate to the page with the data
                 driver.get("https://www.youtube.com/gaming")
                 logger.info(f"Attempting to retrieve data for {game}")
                 
-                # Retrieve views
                 views_element = wait.until(EC.presence_of_element_located((By.XPATH, paths["views"])))
                 views = views_element.text
 
-                # Retrieve image URL
                 image_element = wait.until(EC.presence_of_element_located((By.XPATH, paths["image"])))
                 image_url = image_element.get_attribute("src")
 
-                # Save to files
                 views_filename = f'{game.lower().replace(" ", "_")}_views.txt'
                 image_filename = f'{game.lower().replace(" ", "_")}_image_url.txt'
 
@@ -104,6 +95,5 @@ except KeyboardInterrupt:
 except Exception as e:
     logger.error(f"An unexpected error occurred: {e}")
 finally:
-    # Close the browser
     driver.quit()
     logger.info("Chrome WebDriver closed")
