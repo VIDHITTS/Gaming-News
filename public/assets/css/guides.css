@@ -69,13 +69,14 @@
 
 .guide-topics li {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-primary);
+    opacity: 0.8;
     font-size: 0.875rem;
 }
 
 .guide-topics li::before {
     content: "•";
-    color: #8B5CF6;
+    color: var(--accent);
     font-weight: bold;
     display: inline-block;
     width: 1em;
@@ -85,17 +86,17 @@
 .read-guide {
     width: 100%;
     padding: 0.75rem;
-    background: #8B5CF6;
+    background: var(--accent);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--button-text);
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .read-guide:hover {
-    background: rgba(139, 92, 246, 0.8);
+    background: var(--accent-active);
 }
 
 .tier-grid {
@@ -169,10 +170,10 @@
 .view-full-tier {
     width: 100%;
     padding: 0.75rem;
-    background: #8B5CF6;
+    background: var(--accent);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--button-text);
     font-weight: 600;
     cursor: pointer;
     margin-top: 1rem;
@@ -180,14 +181,15 @@
 }
 
 .view-full-tier:hover {
-    background: rgba(139, 92, 246, 0.8);
+    background: var(--accent-active);
 }
+
 .section-title {
     font-size: 2rem;
-    color: #ECDFCC;
+    color: var(--text-primary);
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #8B5CF6;
+    border-bottom: 2px solid var(--accent);
 }
 .game-row {
     display: flex;
@@ -269,11 +271,12 @@
 .game-card h3 {
     font-size: 1.4rem; 
     margin-bottom: 0.5rem;
-    color: white;
+    color: var(--button-text);
 }
 
 .game-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--button-text);
+    opacity: 0.8;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     line-height: 1.4;
