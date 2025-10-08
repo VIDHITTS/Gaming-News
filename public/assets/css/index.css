@@ -44,44 +44,48 @@
 .details h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .details p {
     font-size: 1rem;
     margin-bottom: 1rem;
     line-height: 1.6;
+    color: var(--text-primary);
 }
 
 .platforms span {
     display: inline-block;
     margin-right: 0.5rem;
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--accent-hover);
     border-radius: 5px;
     transition: 0.3s;
+    color: var(--text-primary);
 }
 
 .buy-now {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.7rem 2rem;
-    background-color: #e63946;
+    background-color: var(--button-primary);
     border: none;
-    color: white;
+    color: var(--button-text);
     border-radius: 5px;
     font-size: 1rem;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .buy-now:hover {
-    background-color: #04a949;
+    background-color: var(--button-secondary);
     transform: scale(1.11);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .platforms span:hover {
     transform: scale(1.11);
-    background-color: rgb(118, 50, 50);
+    background-color: var(--accent-active);
 }
 
 .contanupper img:hover {
@@ -144,8 +148,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    background: var(--bg-card);
+    color: var(--button-text);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -181,8 +185,8 @@
 }
 
 .watch-now {
-    background-color: #ff5722;
-    color: white;
+    background-color: var(--button-tertiary);
+    color: var(--button-text);
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -192,7 +196,7 @@
 }
 
 .watch-now:hover {
-    background-color: #e64a19;
+    background-color: var(--button-primary);
 }
 
 @media (max-width: 768px) {
