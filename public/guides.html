@@ -11,8 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
     <div class="container">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
             <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
                 <i class="fas fa-moon" id="themeIcon"></i>
             </div>
@@ -345,5 +353,8 @@
             });
         });
     </script>
+    
+    <script src="/assets/js/mobile.js"></script>
+    <script src="/assets/js/theme.js"></script>
 </body>
 </html>

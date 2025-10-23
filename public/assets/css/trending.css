@@ -366,15 +366,36 @@
     color: rgba(149, 0, 255, 0.8);
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+/* Mobile and Tablet Responsive Design for Trending Page */
 
+/* Large Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .scroll-container {
+        padding: 0 20px;
+    }
+    
+    .game-card {
+        flex: 0 0 280px;
+    }
+    
+    .game-card-image {
+        height: 200px;
+    }
+    
+    .awards-subgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
     .content {
         margin-left: 0;
+        padding: 1rem;
     }
 
     .container {
@@ -383,6 +404,7 @@
 
     .game-card {
         flex: 0 0 250px;
+        margin-bottom: 1rem;
     }
 
     .game-card-image {
@@ -390,7 +412,7 @@
     }
 
     .scroll-container {
-        padding: 0 30px;
+        padding: 0 15px;
     }
 
     .scroll-button {
@@ -408,6 +430,7 @@
 
     .awards-subgrid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .award-thumbnail {
@@ -416,10 +439,232 @@
 
     .news-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .topics-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .featured-article {
+        margin-bottom: 2rem;
+    }
+    
+    .article-hero {
+        height: 300px;
+    }
+    
+    .article-content {
+        padding: 1rem;
+    }
+    
+    .article-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .content {
+        padding: 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .game-card {
+        flex: 0 0 200px;
+    }
+    
+    .game-card-image {
+        height: 150px;
+    }
+    
+    .game-card-overlay {
+        padding: 1rem;
+    }
+    
+    .game-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .game-card p {
+        font-size: 0.8rem;
+    }
+    
+    .scroll-container {
+        padding: 0 10px;
+    }
+    
+    .scroll-button {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+    
+    .major-award {
+        height: 250px;
+    }
+    
+    .award-overlay h3 {
+        font-size: 1.5rem;
+    }
+    
+    .award-overlay {
+        padding: 1rem;
+    }
+    
+    .award-card {
+        padding: 1rem;
+    }
+    
+    .award-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .winner h4 {
+        font-size: 1rem;
+    }
+    
+    .winner p {
+        font-size: 0.8rem;
+    }
+    
+    .news-item {
+        margin-bottom: 1rem;
+    }
+    
+    .news-content {
+        padding: 1rem;
+    }
+    
+    .news-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .news-content p {
+        font-size: 0.9rem;
+    }
+    
+    .timestamp {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    
+    .topic-card {
+        padding: 1rem;
+    }
+    
+    .topic-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .topic-card p {
+        font-size: 0.9rem;
+    }
+    
+    .topic-card ul {
+        padding-left: 1rem;
+    }
+    
+    .topic-card li {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .featured-article {
+        margin-bottom: 1.5rem;
+    }
+    
+    .article-hero {
+        height: 250px;
+    }
+    
+    .article-content {
+        padding: 0.5rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .article-details {
+        font-size: 0.9rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (max-width: 768px) {
+    .game-card {
+        touch-action: manipulation;
+    }
+    
+    .game-card:hover {
+        transform: scale(1.02); /* Reduce hover scale for better touch interaction */
+    }
+    
+    .award-card:hover {
+        transform: translateY(-2px); /* Reduce hover effect for touch */
+    }
+    
+    .news-item:hover {
+        transform: translateY(-2px); /* Reduce hover effect for touch */
+    }
+    
+    .topic-card:hover {
+        transform: translateY(-2px); /* Reduce hover effect for touch */
+    }
+    
+    /* Improve scroll behavior */
+    .scroll-container {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .game-row {
+        scroll-snap-type: x mandatory;
+    }
+    
+    .game-card {
+        scroll-snap-align: start;
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .article-hero {
+        height: 200px;
+    }
+    
+    .major-award {
+        height: 200px;
+    }
+    
+    .award-overlay h3 {
+        font-size: 1.5rem;
+    }
+    
+    .featured-article {
+        margin-bottom: 1rem;
+    }
+    
+    .article-content {
+        padding: 0.5rem;
+    }
+    
+    .lead {
+        font-size: 0.9rem;
+    }
+    
+    .article-details {
+        font-size: 0.8rem;
     }
 }
 

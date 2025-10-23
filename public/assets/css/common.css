@@ -220,18 +220,318 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
+/* Mobile and Tablet Responsive Design */
 
+/* Large Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 250px;
+        transition: transform 0.3s ease;
+    }
+    
+    .content {
+        margin-left: 250px;
+    }
+    
+    .viban {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+    }
+}
+
+        /* Tablets (768px and below) */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                transform: translateX(-100%);
+                z-index: 1001;
+                transition: transform 0.3s ease;
+                overflow-y: auto;
+                padding: 1rem;
+            }
+
+            .sidebar.mobile-open {
+                transform: translateX(0);
+            }
+
+            .sidebar .logo {
+                padding-top: 3rem;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .sidebar .logo i {
+                font-size: 2rem;
+            }
+
+            .sidebar .logo h2 {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+
+            .sidebar .connect {
+                margin-top: 2rem;
+            }
+
+            .sidebar .connect li {
+                margin-bottom: 1rem;
+            }
+
+            .sidebar .connect li a {
+                padding: 1rem;
+                font-size: 1rem;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                transition: all 0.3s ease;
+            }
+
+            .sidebar .connect li a:hover {
+                background-color: var(--accent-hover);
+                transform: translateX(5px);
+            }
+    
     .content {
         margin-left: 0;
+        padding: 1rem;
     }
-
+    
     .container {
         flex-direction: column;
+    }
+    
+    .viban {
+        margin-left: 0;
+        width: 100%;
+        height: 400px;
+    }
+    
+    .contanupper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 20%;
+        right: 0;
+        left: 0;
+        padding: 0 1rem;
+    }
+    
+    .contanupper img {
+        width: 150px;
+        margin-bottom: 1rem;
+    }
+    
+    .details {
+        max-width: 100%;
+    }
+    
+    .details h1 {
+        font-size: 1.5rem;
+    }
+    
+    .details p {
+        font-size: 0.9rem;
+    }
+}
+
+        /* Mobile Devices (480px and below) */
+        @media (max-width: 480px) {
+            .content {
+                padding: 0.5rem;
+            }
+
+            .viban {
+                height: 300px;
+            }
+
+            .contanupper {
+                top: 15%;
+                padding: 0 0.5rem;
+            }
+
+            .contanupper img {
+                width: 120px;
+            }
+
+            .details h1 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .details p {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .platforms span {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.8rem;
+                margin-right: 0.3rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .buy-now {
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            /* Mobile sidebar improvements */
+            .sidebar {
+                padding: 0.5rem;
+            }
+
+            .sidebar .logo {
+                padding-top: 2rem;
+                gap: 0.3rem;
+            }
+
+            .sidebar .logo i {
+                font-size: 1.5rem;
+            }
+
+            .sidebar .logo h2 {
+                font-size: 1rem;
+            }
+
+            .sidebar .connect li a {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+                gap: 0.8rem;
+            }
+
+            .sidebar .connect li a i {
+                font-size: 1.1rem;
+            }
+        }
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1002;
+        background: var(--accent);
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background: var(--accent-hover);
+    }
+    
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .mobile-menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .sidebar .logo {
+        padding-top: 3rem;
+    }
+    
+    .sidebar .theme-toggle {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Hide mobile menu toggle on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+
+    .mobile-menu-overlay {
+        display: none;
+    }
+}
+
+/* Touch device optimizations */
+.touch-device * {
+    -webkit-tap-highlight-color: rgba(139, 92, 246, 0.2);
+}
+
+.touch-device .game-container,
+.touch-device .game-card,
+.touch-device .news-item,
+.touch-device .award-card {
+    -webkit-tap-highlight-color: rgba(139, 92, 246, 0.3);
+}
+
+.touch-device .touch-active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+/* Smooth scrolling for all devices */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile viewport height fix */
+:root {
+    --vh: 1vh;
+}
+
+.mobile-layout {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Improved mobile menu animations */
+.sidebar {
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Better focus states for accessibility */
+.sidebar .connect li a:focus,
+.mobile-menu-toggle:focus,
+.buy-now:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Loading state improvements for mobile */
+@media (max-width: 768px) {
+    .viewers-loading {
+        font-size: 0.9rem;
+    }
+    
+    .viewers-loaded {
+        font-size: 0.9rem;
+    }
+    
+    .viewers-error {
+        font-size: 0.9rem;
     }
 }
