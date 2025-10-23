@@ -6,6 +6,7 @@
     <title>Gaming News Hub - Home</title>
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/loading.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -89,44 +90,61 @@
             <hr>
             <br>
             <div class="stream-main">
-                <div class="game-container">
+                <div class="game-container" data-game="1st">
                   <img src="assets/img/pubg.jpg" alt="PUBG" class="game1">
                   <div class="overlay">
                     <p class="game-text">PUBG</p>
-                    <p class="game-text" id="1st-viewers">Loading viewers...</p>
+                    <div class="viewers-container">
+                      <p class="game-text viewers-loading" id="1st-viewers">
+                        <span class="loading-spinner small"></span>
+                        Loading viewers...
+                      </p>
+                    </div>
                     <a href="https://www.youtube.com/channel/UCmeKFsXZRKgTotHhWDKfUpA/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
 
-                <div class="game-container">
+                <div class="game-container" data-game="2nd">
                   <img src="https://m.media-amazon.com/images/I/51MFu2e82VL._AC_UF894,1000_QL80_.jpg" alt="GTA V" class="game2">
                   <div class="overlay">
                     <p class="game-text">GTA V</p>
-                    <p class="game-text" id="2nd-viewers">Loading viewers...</p>
+                    <div class="viewers-container">
+                      <p class="game-text viewers-loading" id="2nd-viewers">
+                        <span class="loading-spinner small"></span>
+                        Loading viewers...
+                      </p>
+                    </div>
                     <a href="https://www.youtube.com/channel/UCOquqcRMJmURiGfEnaitptg/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
 
-                <div class="game-container">
+                <div class="game-container" data-game="3rd">
                   <img src="assets/img/league-legends.png" alt="League of Legends" class="game3">
                   <div class="overlay">
                     <p class="game-text">League of Legends</p>
-                    <p class="game-text" id="3rd-viewers">Loading viewers...</p>
+                    <div class="viewers-container">
+                      <p class="game-text viewers-loading" id="3rd-viewers">
+                        <span class="loading-spinner small"></span>
+                        Loading viewers...
+                      </p>
+                    </div>
                     <a href="https://www.youtube.com/channel/UCZtmNrG53nmbq-Ww2VJrxEQ/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
 
-                <div class="game-container">
+                <div class="game-container" data-game="4th">
                   <img src="assets/img/mobile_legends.jpg" alt="Mobile Legends" class="game4">
                   <div class="overlay">
                     <p class="game-text">Mobile Legends</p>
-                    <p class="game-text" id="4th-viewers">Loading viewers...</p>
+                    <div class="viewers-container">
+                      <p class="game-text viewers-loading" id="4th-viewers">
+                        <span class="loading-spinner small"></span>
+                        Loading viewers...
+                      </p>
+                    </div>
                     <a href="https://www.youtube.com/channel/UCEH7P7kyJIkS_gJf93VYbmg/live" target="_blank"><button class="watch-now">Watch Now</button></a>
                   </div>
                 </div>
-
-
-
             </div>
             <br>
             <h1>Game of the year from 2014-2024</h1>
@@ -225,6 +243,16 @@
 
     <script>
         function updateGameViews(game) {
+            const viewerElement = document.getElementById(`${game}-viewers`);
+            const gameContainer = document.querySelector(`[data-game="${game}"]`);
+            
+            // Show loading state
+            viewerElement.innerHTML = `
+                <span class="loading-spinner small"></span>
+                Loading viewers...
+            `;
+            viewerElement.className = 'game-text viewers-loading';
+            
             // Update fetch path to use data folder
             fetch(`data/${game}_views.txt`)
                 .then(response => {
@@ -234,15 +262,40 @@
                     return response.text();
                 })
                 .then(data => {
-                    document.getElementById(`${game}-viewers`).innerText = data;
+                    // Smooth transition to loaded content
+                    viewerElement.style.opacity = '0';
+                    viewerElement.style.transform = 'translateY(-5px)';
+                    
+                    setTimeout(() => {
+                        viewerElement.innerHTML = data;
+                        viewerElement.className = 'game-text viewers-loaded';
+                        viewerElement.style.opacity = '1';
+                        viewerElement.style.transform = 'translateY(0)';
+                        
+                        // Add content loaded class to container
+                        if (gameContainer) {
+                            gameContainer.classList.add('content-loaded');
+                        }
+                    }, 300);
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
-                    document.getElementById(`${game}-viewers`).innerText = "Error loading viewers";
+                    viewerElement.innerHTML = "Error loading viewers";
+                    viewerElement.className = 'game-text viewers-error';
+                    viewerElement.style.opacity = '1';
+                    viewerElement.style.transform = 'translateY(0)';
                 });
         }
     
         function updateGameImage(game) {
+            const imgElement = document.querySelector(`.game-container[data-game="${game}"] img`);
+            
+            if (!imgElement) return;
+            
+            // Add loading state to image
+            imgElement.style.opacity = '0.5';
+            imgElement.style.filter = 'blur(2px)';
+            
             // Update fetch path to use data folder
             fetch(`data/${game}_image_url.txt`)
                 .then(response => {
@@ -252,10 +305,18 @@
                     return response.text();
                 })
                 .then(url => {
-                    document.querySelector(`.game-container img.game${game[0]}`).src = url.trim();
+                    // Smooth transition for image
+                    setTimeout(() => {
+                        imgElement.src = url.trim();
+                        imgElement.style.opacity = '1';
+                        imgElement.style.filter = 'none';
+                        imgElement.classList.add('content-loaded');
+                    }, 500);
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
+                    imgElement.style.opacity = '1';
+                    imgElement.style.filter = 'none';
                 });
         }
     
@@ -271,17 +332,19 @@
             updateGameImage('4th');
         }, 5000);
     
-        // Initial calls to update viewers and images
-        updateGameViews('1st');
-        updateGameViews('2nd');
-        updateGameViews('3rd');
-        updateGameViews('4th');
-        updateGameImage('1st');
-        updateGameImage('2nd');
-        updateGameImage('3rd');
-        updateGameImage('4th');
+        // Initial calls to update viewers and images with staggered loading
+        setTimeout(() => updateGameViews('1st'), 100);
+        setTimeout(() => updateGameViews('2nd'), 200);
+        setTimeout(() => updateGameViews('3rd'), 300);
+        setTimeout(() => updateGameViews('4th'), 400);
+        
+        setTimeout(() => updateGameImage('1st'), 500);
+        setTimeout(() => updateGameImage('2nd'), 600);
+        setTimeout(() => updateGameImage('3rd'), 700);
+        setTimeout(() => updateGameImage('4th'), 800);
     </script>
 
+    <script src="/assets/js/loading.js"></script>
     <script src="/assets/js/theme.js"></script>
     
 </body>

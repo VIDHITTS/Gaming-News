@@ -5,6 +5,7 @@
     <title>Gaming News Hub - Trending</title>
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/trending.css">
+    <link rel="stylesheet" href="/assets/css/loading.css">
 
 </head>
 <body>
@@ -511,6 +512,64 @@
         </main>
     </div>
 
+    <script src="/assets/js/loading.js"></script>
     <script src="/assets/js/theme.js"></script>
+    
+    <script>
+        // Initialize loading states for trending page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add staggered loading animations to content sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+            
+            // Add loading animation to game cards
+            const gameCards = document.querySelectorAll('.game-card');
+            gameCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 1000 + (index * 100));
+            });
+            
+            // Add loading animation to news items
+            const newsItems = document.querySelectorAll('.news-item');
+            newsItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 1500 + (index * 150));
+            });
+            
+            // Add loading animation to award cards
+            const awardCards = document.querySelectorAll('.award-card');
+            awardCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 2000 + (index * 50));
+            });
+        });
+    </script>
 </body>
 </html>
