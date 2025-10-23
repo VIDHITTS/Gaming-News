@@ -34,7 +34,15 @@
     </div>
 
     <div class="container">
-        <nav class="sidebar">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        
+        <nav class="sidebar" id="sidebar">
             <div class="theme-toggle" id="themeToggle" title="Toggle Theme">
                 <i class="fas fa-moon" id="themeIcon"></i>
             </div>
@@ -345,7 +353,59 @@
     </script>
 
     <script src="/assets/js/loading.js"></script>
+    <script src="/assets/js/mobile.js"></script>
     <script src="/assets/js/theme.js"></script>
+    
+    <script>
+        // Mobile Navigation Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const sidebar = document.getElementById('sidebar');
+            
+            // Toggle mobile menu
+            mobileMenuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('mobile-open');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('mobile-open') ? 'hidden' : '';
+            });
+            
+            // Close mobile menu when overlay is clicked
+            mobileMenuOverlay.addEventListener('click', function() {
+                sidebar.classList.remove('mobile-open');
+                mobileMenuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Close mobile menu when navigation link is clicked
+            const navLinks = document.querySelectorAll('.connect li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    sidebar.classList.remove('mobile-open');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+            
+            // Close mobile menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('mobile-open')) {
+                    sidebar.classList.remove('mobile-open');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    sidebar.classList.remove('mobile-open');
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
     
 </body>
 </html>
